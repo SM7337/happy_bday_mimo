@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>For Mimo ♡</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- HERO -->
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">A little something</div>
+
+          <h1>For <span>Mimo.</span></h1>
+
+          <p>
+            In May 5 2026 an alien from K-19 planet arrived. That alien sent me
+            a letter through an app called Slowly. We exchanged letters and I
+            learned a lot about that alien.
+          </p>
+
+          <button class="enter-button" onclick="scrollToAbout()">What?</button>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+
+      <section id="about">
+        <div class="reveal">
+          <div class="section-label">A lot in common too</div>
+
+          <h2 class="section-title">Things I learned about this alien.</h2>
+
+          <p class="section-description">
+            After a while exchanging letters I've got to know a few things about
+            this alien. Not everything is here cause I have a gold fish memory
+            🐟
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card reveal">
+            <div class="card-icon water-gradient"></div>
+
+            <h3>Black and Green</h3>
+
+            <p>Just like me she likes black and green. Wears black too ⚫🟢.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon">
+              <img
+                style="transform: scale(2) translate(25px, 0px)"
+                src="https://img.itch.zone/aW1nLzIxMzc1NzUxLnBuZw==/original/lNbmO2.png"
+                alt=""
+              />
+            </div>
+
+            <h3>Sky</h3>
+
+            <p>She said she likes the sky a lot 🟦.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon">
+              <img
+                src="https://img.magnific.com/free-vector/book-floating-cartoon-vector-icon-illustration-education-object-icon-isolated-flat-vector_138676-13661.jpg?semt=ais_hybrid&w=740&q=80"
+                alt=""
+              />
+            </div>
+
+            <h3>Books</h3>
+
+            <p>She loves to read books 📗.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon">
+              <img
+                src="https://img.magnific.com/free-vector/cute-cat-sitting-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-4148.jpg?semt=ais_hybrid&w=740&q=80"
+                alt=""
+              />
+            </div>
+
+            <h3>Cats</h3>
+
+            <p>She love cats and she already have one 😺.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon">
+              <img
+                src="https://img.magnific.com/premium-vector/cute-ice-cream-cone-chocolate-cartoon-vector-icon-illustration-sweet-food-icon-isolated-flat_138676-15160.jpg"
+                alt=""
+              />
+            </div>
+
+            <h3>Chocolate and Ice Cream</h3>
+
+            <p>
+              Few of her favorite foods are Chocolate and Ice Cream 🍫🍦. There
+              are a lot of other food 😋.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MESSAGE -->
+
+      <section id="message" class="message">
+        <div class="reveal">
+          <div class="section-label">Wish you</div>
+
+          <h2 class="section-title">Happy Birthday</h2>
+        </div>
+
+        <div class="message-box reveal">
+          <p>
+            This alien told me I deserve good people around my orbit. I felt
+            really good reading that. At first the letters she sent felt really
+            weird. Then I thought this alien went away from our planet without
+            even saying good bye. After a while she came back. I thought I lost
+            a friend. But now I think I made a good friend.
+            <br />
+            <br />
+            Friends 1 -> 2
+            <br />
+            <br />
+            All the stories aside. I'm a gift person. So I like to give gifts.
+            But I don't have any idea on how to give a gift. Last time I gifted
+            my best friend for his birthday. I didn't have time cause he wanted
+            to meet me so fast and somehow I went through whole town to find
+            something that made sense. If I had time I would've ordered it from
+            Daraz. He was in a hurry. You said you like personal gifts. I don't
+            know you personally. But I do know about you from the letters and
+            messages we exchanged. So this is what came to my mind when thinking
+            for a personal gift. Hope you like it and happy birthday 🎂🥳.
+            <br />
+            <br />
+            I hope you like this. I have no idea how to design a good looking
+            website. I had only a few hours to make so I asked ChatGPT for a
+            dozen of mockups. None of them fit me so I went old style. The style
+            I always use. People don't like it. What do you think?
+          </p>
+
+          <div class="signature">— Savee</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>Made specifically for <span>Mimo</span></footer>
+
+    <script>
+      function scrollToAbout() {
+        document.getElementById("about").scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+        },
+      );
+
+      revealElements.forEach((element) => observer.observe(element));
+    </script>
+  </body>
+</html>
